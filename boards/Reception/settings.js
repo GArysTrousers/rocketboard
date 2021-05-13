@@ -1,0 +1,1 @@
+settings.slickOptions.autoplaySpeed = 3000;
