@@ -51,7 +51,7 @@ $boardName = isset($_GET['board']) ? $_GET['board'] : '';
 
     $files = glob($BOARDS_DIR . $boardName . '/*.*');
     foreach (preg_grep('/\.(png|jpg|jpeg|bmp|gif|webp)$/i', $files) as $filename) {
-      echo sprintf('<div class="div-image" style="background-image: url(/boards/%s/%s)"></div>', myUrlEncode($boardName), myUrlEncode(basename($filename)));
+      echo sprintf('<div class="div-image" style="background-image: url(/boards/%s/%s?rand=%d)"></div>', myUrlEncode($boardName), myUrlEncode(basename($filename)), rand());
     }
 
     echo '</div>';
