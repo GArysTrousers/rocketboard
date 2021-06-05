@@ -13,14 +13,6 @@ a {
   text-decoration: none;
 }
 
-pre code {
-  font-size: larger;
-  background-color: #222;
-  padding: 0.75rem;
-  border-radius: 0.25rem;
-  border: 1px solid #333
-}
-
 .red {
   color: #e62828
 }
@@ -96,4 +88,31 @@ pre code {
 #bottom-right {
   bottom: 0;
   right: 0;
+}
+
+
+/* scrollbar */
+/* width */
+::-webkit-scrollbar {
+  width: 14px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: hsl(220, 3%, 20%);
+  border-radius: 10px;
+  width: 14px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: hsl(220, 3%, 50%);
+  border: 4px solid hsl(220, 3%, 20%);
+  border-radius: 10px;
+  width: 5px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: hsl(220, 3%, 40%);
 }

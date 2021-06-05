@@ -50,7 +50,7 @@ function updateClock() {
 }
 
 async function updateWeather() {
-  const data = await fetchData('api/weather', settings.weather.options);
+  const data = await fetchData('api/weather.php', settings.weather.options);
 
   switch (data.cod) {
     case 200:
@@ -65,6 +65,8 @@ async function updateWeather() {
       $('#div-weather').html("Weather Error: API key missing or incorrect"); break;
     case 404:
       $('#div-weather').html("Weather Error: City not found"); break;
+    default:
+      $('#div-weather').html("Unknown Weather Error"); break;
   }
 }
 

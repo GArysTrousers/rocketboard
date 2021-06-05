@@ -12,12 +12,12 @@ const settings = {
     position: 'bottom-left',
     options: {
       type: "weather",
-      cityName: "Bairnsdale",
+      cityName: "Melbourne",
       units: "metric"
     }
   },
   slick: {
-    autoplaySpeed: 5000, //how many milliseconds to spend on each slide
+    autoplaySpeed: 5000, // milliseconds per slide
     infinite: true,
     slidesToShow: 1,
     slidesToScroll: 1,

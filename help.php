@@ -8,12 +8,28 @@ include $ROOT . '/assets/php/Parsedown.php';
 <head>
   <title>RocketBoard</title>
   <?php include 'assets/php/head.php' ?>
-  <link rel="stylesheet" href="assets/css/style-rocketboard.css" />
+  <style>
+    h1 {
+      color: #e62828;
+    }
+
+    h2 {
+      color: #00bcf0;
+    }
+
+    pre {
+      font-size: larger;
+      background-color: #222;
+      padding: 0.75rem;
+      border-radius: 0.25rem;
+      border: 1px solid #333
+    }
+  </style>
 </head>
 
 <body>
   <a class="btn btn-gray m-1 position-fixed" href="/">Back</a>
-  <div class="d-flex justify-content-center  m-1">
+  <div class="flex justify-content-center m-1">
     <div class="max-w-5xl mx-5">
       <?php
       $readme = file_get_contents('README.md');

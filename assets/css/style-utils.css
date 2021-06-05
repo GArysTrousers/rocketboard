@@ -144,3 +144,7 @@
 .btn-gray {
   background-color: #3b3b3b
 }
+
+.overflow-hidden {
+  overflow: 0;
+}
