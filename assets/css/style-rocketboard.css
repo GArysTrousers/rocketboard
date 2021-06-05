@@ -1,0 +1,99 @@
+html, body {
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  background-color: black;
+  color: #e9e9e9;
+  font-size: large;
+  /* font-size: min(calc(0.5rem + 1.5vw), 1.3rem); couldn't be useful for clock size*/
+  padding: 0;
+  margin: 0;
+}
+
+a {
+  color: #DDD;
+  text-decoration: none;
+}
+
+pre code {
+  font-size: larger;
+  background-color: #222;
+  padding: 0.75rem;
+  border-radius: 0.25rem;
+  border: 1px solid #333
+}
+
+.red {
+  color: #e62828
+}
+
+.blue {
+  color: #00bcf0
+}
+
+#div-images {
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+}
+
+.div-image {
+  width: 100vh;
+  height: 100vh;
+  background-position: 50% 50%;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.slick-list, .slick-track {
+  height: 100%;
+}
+
+.center-panel {
+  display: flex;
+  justify-content: center;
+  vertical-align: middle;
+}
+
+.modal {
+  background-color: #333;
+  color: black;
+}
+
+.overlay {
+  position: fixed;
+  padding: 2rem;
+  text-shadow: -0.2rem 0 0.7rem black, 0.2rem 0 0.7rem black, 0 -0.2rem 0.7rem black, 0 0.2rem 0.7rem black;
+}
+
+#div-clock {
+  font-size: 5rem;
+}
+
+#div-date {
+  font-size: 2.5rem;
+  color:#cccccc;
+}
+
+#div-weather {
+  font-size: 4rem;
+  min-height: 5rem;
+}
+
+#top-left {
+  top: 0;
+  left: 0;
+}
+
+#top-right {
+  top: 0;
+  right: 0;
+}
+
+#bottom-left {
+  bottom: 0;
+  left: 0;
+}
+
+#bottom-right {
+  bottom: 0;
+  right: 0;
+}

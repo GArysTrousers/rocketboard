@@ -20,13 +20,19 @@ Feel free to modify the the project however you like, but there is a few built i
 - "settings.js" in the webroot contains the settings for slick (the carousel library) and any other future js settings.
 - You can also create a new "settings.js" file in a board folder to override settings for that board, such as:
 
-      settings.slickOptions.autoplaySpeed = 1000;
+      settings.slick.autoplaySpeed = 1000;
 
 ## Who made this?
 Ben made this.
 
 with:
 - [PHP](https://www.php.net/)
-- [Bootstrap](https://getbootstrap.com/)
 - [jQuery](https://jquery.com/)
 - [Slick](https://kenwheeler.github.io/slick/)
+- [Open Weather Map](https://openweathermap.org/)
+- [Parsedown](https://parsedown.org/)
+
+<style>
+H1{color:#e62828 !important;}
+H2{color:#00bcf0 !important;}
+</style>

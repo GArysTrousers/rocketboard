@@ -10,8 +10,6 @@ $boardName = isset($_GET['board']) ? $_GET['board'] : '';
 <head>
   <title><?php echo $boardName == '' ? "RocketBoard" : $boardName ?></title>
   <?php include 'assets/php/head.php' ?>
-  <link rel="stylesheet" href="assets/css/style-board.css" />
-  <link rel="stylesheet" href="assets/libs/slick.min.css" />
 </head>
 
 <body>
@@ -20,47 +18,39 @@ $boardName = isset($_GET['board']) ? $_GET['board'] : '';
   //boards page
   if ($boardName == '') {
     
-    echo '<a class="btn btn-dark m-1 position-fixed" href="help.php">?</a>';
-    echo '
-    <div class="d-flex justify-content-center align-items-center text-center h-screen">
+    echo '<a class="btn btn-gray m-1 fixed" href="help.php">?</a>';
+    echo /*html*/'
+    <div class="flex justify-content-center align-items-center text-center h-screen">
       <div>
-        <h1>🚀RocketBoard</h1>
+        <h1>🚀<span class="red">Rocket</span>Board</h1>
         <div class="flex-row flex-wrap max-w-lg">';
 
     foreach (glob($BOARDS_DIR . "*") as $board) {
       if (is_dir($board)) {
         $name = basename($board);
-        echo sprintf('<a class="btn btn-primary m-1" href="./?board=%s">%s</a>', $name, $name);
+        echo sprintf('<a class="btn btn-blue m-1" href="./?board=%s">%s</a>', $name, $name);
       }
     }
 
-    echo '</div>
+    echo /*html*/'
+        </div>
       </div>
     </div>';
 
-    //if board doesn't exist
+    
   } elseif (!file_exists($BOARDS_DIR . $boardName)) {
-    echo /*html*/ '
-    <div class="d-flex justify-content-center align-items-center text-center h-screen">
-      <div class=""><h1>I could not find that board 😥</h1><br/><a class="btn btn-primary" href="/">Back to Board List</a></div>
+    //if board doesn't exist
+    echo '
+    <div class="flex justify-content-center align-items-center text-center h-screen">
+      <div class=""><h1>I couldn\'t find that board 😥</h1><br/><a class="btn btn-blue" href="/">Back to Board List</a></div>
     </div>';
 
-    //show board
+    
   } else {
-    echo '<div id="div-images">';
+    //show board
+    include_once $ROOT . '/assets/php/RocketBoard.php';
+    echo rocketBoard($boardName, $BOARDS_DIR);
 
-    $files = glob($BOARDS_DIR . $boardName . '/*.*');
-    foreach (preg_grep('/\.(png|jpg|jpeg|bmp|gif|webp)$/i', $files) as $filename) {
-      echo sprintf('<div class="div-image" style="background-image: url(/boards/%s/%s?rand=%d)"></div>', myUrlEncode($boardName), myUrlEncode(basename($filename)), rand());
-    }
-
-    echo '</div>';
-
-    echo '<script src="assets/libs/slick.min.js"></script>';
-    echo '<script src="settings.js"></script>';
-    if (file_exists($BOARDS_DIR . $boardName . '/settings.js'))
-      echo sprintf('<script src="boards/%s/settings.js"></script>', myUrlEncode($boardName));
-    echo '<script src="assets/js/board.js"></script>';
   }
   ?>
 

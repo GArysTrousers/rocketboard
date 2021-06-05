@@ -1,8 +1,22 @@
 //these are the default settings for every board
-//you can place a settings.js file in a board dir to override these settings
 
 const settings = {
-  slickOptions: {
+  clock: {
+    enabled: true,
+    position: 'bottom-left',
+    showTime: true,
+    showDate: true,
+  },
+  weather: {
+    enabled: true,
+    position: 'bottom-left',
+    options: {
+      type: "weather",
+      cityName: "Bairnsdale",
+      units: "metric"
+    }
+  },
+  slick: {
     autoplaySpeed: 5000, //how many milliseconds to spend on each slide
     infinite: true,
     slidesToShow: 1,
@@ -15,4 +29,4 @@ const settings = {
 }
 
 //change settings on a specific board, add a settings.js file with reassignments like:
-//settings.slickOptions.autoplaySpeed = 1000;
+//settings.slick.autoplaySpeed = 1000;
