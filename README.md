@@ -6,6 +6,7 @@ __*File system backend, Browser based frontend.*__
 
 ## Features
 - Display images on rotation.
+- Manage boards with file explorer.
 - One server, multiple boards.
 - Customizable overlay with:
   - Time ⌚
@@ -66,13 +67,15 @@ const settings = {
 /
   index.php   <- main page
   settings.js <- default settings
-  boards/
+  boards/     <- share this on network
     Board1/   <- board name
-      image.png
+      ...
+      image.png  <- images on Board1
       ...
     Board2/   <- board name
       settings.js <- override settings
-      image.png
+      ...
+      image.png  <- images on Board2
       ...
   api/
     weather.php  <- put api key here
