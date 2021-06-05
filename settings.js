@@ -13,7 +13,7 @@ const settings = {
     options: {
       type: "weather",
       cityName: "Melbourne",
-      units: "metric"
+      units: "metric",
     }
   },
   slick: {

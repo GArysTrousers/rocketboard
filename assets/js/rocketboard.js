@@ -1,5 +1,11 @@
 //this requires at least one settings.js to run
 
+const measurementSymbols = {
+  metric: 'c',
+  standard: 'k',
+  imperial: 'f'
+}
+
 $(document).ready(function () {
   try {
     // 'afterChange' event won't trigger if there is less than 2 images, so set a timer to refresh
@@ -54,7 +60,7 @@ async function updateWeather() {
 
   switch (data.cod) {
     case 200:
-      $('#div-weather').html(Math.round(data.main.temp) + '&degc');
+      $('#div-weather').html(Math.round(data.main.temp) + '&deg' + measurementSymbols[settings.weather.options.units]);
       setTimeout(() => {
         updateWeather();
       }, 5000);

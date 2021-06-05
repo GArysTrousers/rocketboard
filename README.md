@@ -1,32 +1,52 @@
 # 🚀RocketBoard
 ## What is this?
-RocketBoard is a simple digital signage system.
+🚀RocketBoard is a simple digital signage system.
 
 __*File system backend, Browser based frontend.*__
 
 ## Features
 - Display images on rotation.
 - Manage boards with file explorer.
-- One server, multiple boards.
-- Customizable overlay with:
+- One server, unlimited boards.
+- Customisable overlay with:
   - Time ⌚
   - Date 📆
   - Tempreture 🌡
 
 ## How do I use it?
-There's a few things you'll need to understand to make use of 🚀RocketBoard.
 
-- In the webroot, there is a folder called "boards".
-- Making a folder inside "boards" creates a board with that name.
+- You'll need a webserver with PHP like [XAMPP](https://www.apachefriends.org/download.html).
+- Place the project files in the webroot.
+- Making a folder inside the "boards" folder creates a board with that name.
 - A board will show whatever images are in its folder.
 - To display a board, just open a browser to:
 
-      http://[server ip or hostname]/?=[board name]
+      http://[server address]/?=[board name]
+Note: To use the weather feature you'll need to get an API key from [Open Weather Map](https://openweathermap.org/), and put it in /api/weather.php.
+
+## File Structure
+```
+/
+  index.php   <- main page
+  settings.js <- default settings
+  boards/     <- share this on network
+    Board1/   <- board name
+      ...
+      image.png  <- images on Board1
+      ...
+    Board2/   <- board name
+      settings.js <- override settings
+      ...
+      image.png  <- images on Board2
+      ...
+  api/
+    weather.php  <- put api key here
+```
 
 ## How do I customise it?
 Feel free to modify the the project however you like, but there is a few built in ways to customise your boards.
 
-- "settings.js" in the root directory contains the default settings for the boards.
+- The "settings.js" file in the webroot contains the default settings for the boards.
 - You can create a "settings.js" file in a board folder to override settings for that board, such as:
 
       settings.slick.autoplaySpeed = 1000;
@@ -62,24 +82,7 @@ const settings = {
   }
 }
 ```
-## File Structure
-```
-/
-  index.php   <- main page
-  settings.js <- default settings
-  boards/     <- share this on network
-    Board1/   <- board name
-      ...
-      image.png  <- images on Board1
-      ...
-    Board2/   <- board name
-      settings.js <- override settings
-      ...
-      image.png  <- images on Board2
-      ...
-  api/
-    weather.php  <- put api key here
-```
+
 
 ## Who made this?
 Ben made this.
