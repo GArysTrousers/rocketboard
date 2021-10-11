@@ -10,7 +10,6 @@ $(document).ready(function () {
   try {
     // 'afterChange' event won't trigger if there is less than 2 images, so set a timer to refresh
     if ($('#div-images').children().length < 2) {
-      console.log("FUCK");
       setTimeout(() => {
         location.reload()
       }, settings.slick.autoplaySpeed);

@@ -12,7 +12,7 @@ const settings = {
     position: 'bottom-left',
     options: {
       type: "weather",
-      cityName: "Melbourne",
+      cityName: "Melbourne, AU",
       units: "metric",
     }
   },
