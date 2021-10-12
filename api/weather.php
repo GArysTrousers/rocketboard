@@ -1,7 +1,6 @@
 <?php
 
 $apikey = 'your_openweathermap.org_apikey_here';
-$apikey = 'e8ef9b16f3aeabe166119ac4fbf6ce24';
 
 // Time between fresh data calls for weather in seconds
 $maxCacheAge = 60;
