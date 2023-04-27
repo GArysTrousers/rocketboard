@@ -21,7 +21,7 @@ __*File system backend, Browser based frontend.*__
 - A board will show whatever images are in its folder.
 - To display a board, just open a browser to:
 
-      http://[server address]/?=[board name]
+      http://[server address]/?board=[board name]
 Note: To use the weather feature you'll need to get an API key from [Open Weather Map](https://openweathermap.org/), and put it in /api/weather.php.
 
 ## File Structure
